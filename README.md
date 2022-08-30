@@ -12,7 +12,7 @@ Currently implemented is:
 *    [x]  Backend User authentication with JWT
 *    [x]  Middleware that checks for user role
 *    [x]  Added api documentation generator
-*    [ ]  Configurable environmental variables in .env file
+*    [x]  Configurable environmental variables in .env file
 
 ---
 
