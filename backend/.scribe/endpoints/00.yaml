@@ -1,0 +1,193 @@
+name: Endpoints
+endpoints:
+  - uri: /
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 200
+        description: ''
+        headers:
+          access-control-allow-origin: 'http://localhost:8081'
+          vary: Origin
+          content-type: application/json; charset=utf-8
+        content: |-
+          {
+              "message": "Welcome to bezkoder application."
+          }
+    responseFields: {}
+  - uri: /api/auth/signup
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      username:
+        name: username
+        type: string
+        example: reiciendis
+        required: true
+        description: ''
+      email:
+        name: email
+        type: string
+        example: nostrum
+        required: true
+        description: ''
+      password:
+        name: password
+        type: string
+        example: minus
+        required: true
+        description: ''
+      roles:
+        name: roles
+        type: string
+        example: reprehenderit
+        required: true
+        description: ''
+    responses: []
+    responseFields: {}
+  - uri: /api/auth/signin
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      username:
+        name: username
+        type: string
+        example: neque
+        required: true
+        description: ''
+      password:
+        name: password
+        type: string
+        example: esse
+        required: true
+        description: ''
+    responses: []
+    responseFields: {}
+  - uri: /api/auth/refreshtoken
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /api/test/all
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 200
+        description: ''
+        headers:
+          access-control-allow-origin: 'http://localhost:8081'
+          vary: Origin
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: text/html; charset=utf-8
+        content: Public Content.
+    responseFields: {}
+  - uri: /api/test/user
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 403
+        description: ''
+        headers:
+          access-control-allow-origin: 'http://localhost:8081'
+          vary: Origin
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          {
+              "message": "No token provided!"
+          }
+    responseFields: {}
+  - uri: /api/test/mod
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 403
+        description: ''
+        headers:
+          access-control-allow-origin: 'http://localhost:8081'
+          vary: Origin
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          {
+              "message": "No token provided!"
+          }
+    responseFields: {}
+  - uri: /api/test/admin
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 403
+        description: ''
+        headers:
+          access-control-allow-origin: 'http://localhost:8081'
+          vary: Origin
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          {
+              "message": "No token provided!"
+          }
+    responseFields: {}
