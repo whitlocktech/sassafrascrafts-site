@@ -1,3 +1,4 @@
+require('dotenv').config('../.env')
 const {
     DB_USER,
     DB_PASSWORD,
