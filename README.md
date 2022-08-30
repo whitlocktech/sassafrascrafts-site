@@ -2,7 +2,7 @@
 
 ---
 
-<table><tbody><tr><td>Backend Packages Used</td><td>Frontend Packes Used</td></tr><tr><td><ul><li>bcryptjs</li><li>cookie-session</li><li>cors</li><li>dotenv</li><li>express</li><li>jsonwebtoken</li><li>mongodb</li><li>mongoose</li><li>uuid</li></ul></td><td>Not yet Implemented</td></tr><tr><td>Dev Packages</td><td>&nbsp;</td></tr><tr><td>nodemont</td><td>&nbsp;</td></tr></tbody></table>
+<table><tbody><tr><td>Backend Packages Used</td><td>Frontend Packes Used</td></tr><tr><td><ul><li>bcryptjs</li><li>cookie-session</li><li>cors</li><li>dotenv</li><li>express</li><li>jsonwebtoken</li><li>mongodb</li><li>mongoose</li><li>uuid</li></ul></td><td>Not yet Implemented</td></tr><tr><td>Dev Packages</td><td>&nbsp;</td></tr><tr><td>nodemon</td><td>&nbsp;</td></tr></tbody></table>
 
 ### This is my Mevn Stack
 
@@ -24,12 +24,24 @@ Currently implemented is:
 *   /api/auth/refreshtoken  
     This one controls the refresh token
 *   /api/test/all  
-    This endpoint is open to anyone. So best to use on the front end like blog everyone can view.
+    This endpoint is open to anyone. So best to use for the front end like blog everyone can view.
 *   /api/test/user  
     This endpoint is restricted to signed-in users
 *   /api/test/mod  
-    This endpoint is restricted to signed-in moderators
+    This endpoint is restricted to signed-in moderators.
 *   /api/test/admin  
     This endpoint is restricted to signed-in admins
 
-These endpoints are examples and will be further expanded to actual endpoints in the applications that will be built with it.
+These endpoints are examples and will be further expanded to current endpoints in the applications that will be built with it.
+
+---
+
+### RoadMap
+
+*    [ ]  Add SSO support
+*    [ ]  Add the ability to upload things like pictures
+
+This is a learning repository for me. I welcome all advice and examples of how to do things better. If you know how to implement things on the RoadMap, or have ideas about other things that I should include in this, please let me know. I will also accept PRs to update things. I just ask that you please either document it with comments or include a .md file that explains what is going on and how it works.  
+Thanks,
+
+Whitlocktech
