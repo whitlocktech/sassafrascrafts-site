@@ -1,104 +1,96 @@
-import express, { response } from 'express'
-import { MongoClient } from 'mongodb'
-import { v4 as uuid } from 'uuid'
-import cors from 'cors'
+const express = require("express");
+const cors = require("cors");
+const cookieSession = require("cookie-session");
 
-const startServer = async () =>{
-    const app = express()
-    app.use(cors())
-    app.use(express.json())
+const dbConfig = require("./config/db.config");
 
-    //need to remove hard coded address and add whatever security mongo has to secure the connection
-    const client = await MongoClient.connect('mongodb://localhost:27017', {
-        maxPoolSize: 10,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    // need to remove hardcoded db name
-    const db = client.db('dashboard')
+const app = express();
 
-    app.get('/api/links', async (req, res) => {
-        const links = await db.collection('links').find({}).toArray()
-        res.json(links) 
-    })
 
-    app.get('/api/bookmarks', async (req, res) => {
-        const bookmarks = await db.collection('bookmarks').find({}).toArray()
-        res.json(bookmarks)
-    })
+var corsOptions = {
+  origin: "http://localhost:8081"
+};
 
-    app.post('/api/links', async (req, res) => {
-        const { name, address, adminAddress, category } = req.body
+app.use(cors(corsOptions));
 
-        await db.collection('links').insertOne({
+// parse requests of content-type - application/json
+app.use(express.json());
 
-            name,
-            address,
-            adminAddress,
-            category,
-        });
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
-        const links = await db.collection('links').find({}).toArray()
+app.use(
+  cookieSession({
+    name: "bezkoder-session",
+    secret: "COOKIE_SECRET", // should use as secret environment variable
+    httpOnly: true
+  })
+);
 
-        res.json(links)
-    });
+const db = require("./models");
+const Role = db.role;
 
-    app.post('/api/bookmarks', async (req, res) => {
-        const { name, address, adminAddress, category, note } = req.body
+db.mongoose
+  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("Successfully connect to MongoDB.");
+    initial();
+  })
+  .catch(err => {
+    console.error("Connection error", err);
+    process.exit();
+  });
 
-        await db.collection('bookmarks').insertOne({
-            id: uuid(),
-            name,
-            address,
-            adminAddress,
-            category,
-            note,
-        })
-        const bookmarks = await db.collection('bookmarks').find({}).toArray()
-        res.json(bookmarks)
-    })
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to bezkoder application." });
+});
 
-    app.put('/api/links/:name', async (req, res) => {
-        const { name: linkName } = req.params
-        const { name, address, adminAddress, category } = req.body
+// routes
+require("./routes/auth.routes")(app);
+require("./routes/user.routes")(app);
 
-        const link = await db.collection('links').findOne({ name: linkName })
-       
-        link.name = name || link.name
-        link.address = address || link.address
-        link.adminAddress = adminAddress || link.adminAddress
-        link.category = category || link.category
+// set port, listen for requests
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
 
-        await db.collection('links').updateOne({ name: linkName }, {
-            $set: link,
-        })
+function initial() {
+  Role.estimatedDocumentCount((err, count) => {
+    if (!err && count === 0) {
+      new Role({
+        name: "user"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
 
-        const updatedLink = await db.collection('links').find({}).toArray()
+        console.log("added 'user' to roles collection");
+      });
 
-        res.json(updatedLink)
-    })
-    app.put('/api/bookmarks/:id', async (req, res) => {
-        const { id: bookMarkId } = req.params
-        const { name, address, adminAddress, category, note } = req.body
+      new Role({
+        name: "moderator"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
 
-        const bookmark = await db.collection('bookmarks').findOne({ name: bookMarkId })
+        console.log("added 'moderator' to roles collection");
+      });
 
-        bookmark.name = name || bookmark.name
-        bookmark.address = address || bookmark.address
-        bookmark.adminAddress = adminAddress || bookmark.adminAddress
-        bookmark.category = category || bookmark.category
-        bookmark.note = note || bookmark.note 
+      new Role({
+        name: "admin"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
 
-        await db.collection('bookmarks').updateOne({ name: bookMarkId }, {
-            $set: bookmark,
-        })
-
-        const updatedBookmark = await db.collection('bookmarks').find({}).toArray()
-
-        res.json(updatedBookmark)
-    })
-
-    // need to remove hardcoded port
-    app.listen(8000, () => console.log('Server is Listening on port 3000'))
+        console.log("added 'admin' to roles collection");
+      });
+    }
+  });
 }
-startServer()
