@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dbConfig = require("./config/db.config");
-
+require('dotenv').config()
 const app = express();
 
 let corsOptions = {
@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
 const Role = db.role;
-
+console.log(db.url)
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -43,7 +43,7 @@ require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.NODE_DOCKER_PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
