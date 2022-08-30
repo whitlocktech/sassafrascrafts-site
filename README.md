@@ -9,10 +9,10 @@
 This is going to be the basis of my other sites that i am currently working on building.  
 Currently implemented is:
 
-*    [x]  Backend User authentication with JWT
-*    [x]  Middleware that checks for user role
-*    [x]  Added api documentation generator
-*    [x]  Configurable environmental variables in .env file
+*   [x] Backend User authentication with JWT
+*   [x] Middleware that checks for user role
+*   [x] Added api documentation generator
+*   [x] Configurable environmental variables in .env file
 
 ---
 
@@ -35,12 +35,16 @@ Currently implemented is:
 
 These endpoints are examples and will be further expanded to current endpoints in the applications that will be built with it.
 
+The api documentation is located in index.html under backend/public/docs/
+
+I will work on adding a way to view it when the server is running.
+
 ---
 
 ### RoadMap
 
-*    [ ]  Add SSO support
-*    [ ]  Add the ability to upload things like pictures
+*   [ ] Add SSO support
+*   [ ] Add the ability to upload things like pictures
 
 This is a learning repository for me. I welcome all advice and examples of how to do things better. If you know how to implement things on the RoadMap, or have ideas about other things that I should include in this, please let me know. I will also accept PRs to update things. I just ask that you please either document it with comments or include a .md file that explains what is going on and how it works.  
 Thanks,
