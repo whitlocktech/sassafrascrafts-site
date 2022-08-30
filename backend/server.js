@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
 const Role = db.role;
-console.log(db.url)
+console.log(dbConfig.url)
 db.mongoose
-  .connect(db.url, {
+  .connect(dbConfig.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
