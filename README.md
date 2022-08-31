@@ -45,6 +45,7 @@ I will work on adding a way to view it when the server is running.
 
 *   [ ] Add SSO support
 *   [ ] Add the ability to upload things like pictures
+*   [ ]  Add nodemailer to support smtp
 
 This is a learning repository for me. I welcome all advice and examples of how to do things better. If you know how to implement things on the RoadMap, or have ideas about other things that I should include in this, please let me know. I will also accept PRs to update things. I just ask that you please either document it with comments or include a .md file that explains what is going on and how it works.  
 Thanks,
