@@ -8,5 +8,21 @@ module.exports = function(app) {
         )
         next()
     })
-    app.get("/api/blog/posts", controller.public)
+    // CreateBlogPost endpoint
+    app.post("/api/blog/post", [authJwt.verifyToken, authJwt.isAdmin], controller.createPost)
+
+    // Get all blog posts
+    app.get("/api/blog/posts", controller.getPosts)
+
+    // Get all published Posts
+    app.get("/api/blog/published", controller.findAllPublished)
+
+    // Retrieve a single post NOT CURRENTLY WORKING
+    app.get("/api/blog/post", [authJwt.verifyToken, authJwt.isAdmin], controller.getPost)
+
+    // Update post by id
+    app.put("/api/blog/post", [authJwt.verifyToken, authJwt.isAdmin], controller.updatePost)
+
+    // Delete post by id
+    app.delete("/api/blog/post", [authJwt.verifyToken, authJwt.isAdmin], controller.deletePost)
 }

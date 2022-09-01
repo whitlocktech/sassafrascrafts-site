@@ -1,3 +1,4 @@
+const { ObjectID } = require("bson")
 const mongoose = require("mongoose")
 
 const Blog = mongoose.model(
@@ -5,14 +6,9 @@ const Blog = mongoose.model(
     new mongoose.Schema({
         title: String,
         author: String,
-        publishStatus: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "PublishStatus",
-            }
-        ],
-        images:[],
         content: String,
+        published: Boolean,
+        images:[]
     })
 )
 module.exports = Blog
