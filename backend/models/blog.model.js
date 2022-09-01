@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const Blob = mongoose.model(
+const Blog = mongoose.model(
     "Blog",
     new mongoose.Schema({
         title: String,

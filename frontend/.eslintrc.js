@@ -9,6 +9,7 @@ module.exports = {
     ],
     rules: {
       'vue/multi-word-component-names': 0,
+      'vue/no-reserved-component-names': 0,
       // override/add rules settings here, such as:
       // 'vue/no-unused-vars': 'error'
     }
