@@ -12,7 +12,7 @@
         "name": "Backend Documentation",
         "description": "",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_postman_id": "23e6d466-1eac-477c-a42c-497f09297a00"
+        "_postman_id": "599569c7-96d5-4cb2-976b-4358ee9cc470"
     },
     "item": [
         {
@@ -84,7 +84,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"username\": \"inventore\",\n    \"email\": \"similique\",\n    \"password\": \"perspiciatis\",\n    \"roles\": \"fugit\"\n}"
+                            "raw": "{\n    \"username\": \"porro\",\n    \"email\": \"molestias\",\n    \"password\": \"quis\",\n    \"roles\": \"dolore\"\n}"
                         },
                         "description": null,
                         "auth": {
@@ -115,7 +115,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"username\": \"sapiente\",\n    \"password\": \"saepe\"\n}"
+                            "raw": "{\n    \"username\": \"inventore\",\n    \"password\": \"ducimus\"\n}"
                         },
                         "description": null,
                         "auth": {
@@ -366,7 +366,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"quasi\",\n    \"author\": \"ea\",\n    \"published\": \"aperiam\",\n    \"content\": \"ad\"\n}"
+                            "raw": "{\n    \"title\": \"non\",\n    \"author\": \"quia\",\n    \"published\": \"sit\",\n    \"content\": \"labore\"\n}"
                         },
                         "description": null,
                         "auth": {
@@ -418,7 +418,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
+                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Updated Test Post Again\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
                             "name": ""
                         }
                     ]
@@ -466,7 +466,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
+                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Updated Test Post Again\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
                             "name": ""
                         }
                     ]
@@ -476,9 +476,17 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api/blog/post",
+                            "path": "api/blog/post/:id",
                             "query": [],
-                            "raw": "http://{{baseUrl}}/api/blog/post"
+                            "raw": "http://{{baseUrl}}/api/blog/post/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "dicta",
+                                    "description": ""
+                                }
+                            ]
                         },
                         "method": "GET",
                         "header": [
@@ -513,8 +521,8 @@
                                     "value": "application/json; charset=utf-8"
                                 }
                             ],
-                            "code": 403,
-                            "body": "{\n    \"message\": \"No token provided!\"\n}",
+                            "code": 404,
+                            "body": "{\n    \"message\": \"No post found with that id\"\n}",
                             "name": ""
                         }
                     ]
@@ -524,9 +532,17 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api/blog/post",
+                            "path": "api/blog/post/:id",
                             "query": [],
-                            "raw": "http://{{baseUrl}}/api/blog/post"
+                            "raw": "http://{{baseUrl}}/api/blog/post/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ratione",
+                                    "description": ""
+                                }
+                            ]
                         },
                         "method": "PUT",
                         "header": [
@@ -552,9 +568,17 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api/blog/post",
+                            "path": "api/blog/post/:id",
                             "query": [],
-                            "raw": "http://{{baseUrl}}/api/blog/post"
+                            "raw": "http://{{baseUrl}}/api/blog/post/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "dolorum",
+                                    "description": ""
+                                }
+                            ]
                         },
                         "method": "DELETE",
                         "header": [

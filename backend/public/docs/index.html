@@ -229,10 +229,10 @@ content-type: application/json; charset=utf-8 </code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data '{
-    "username": "inventore",
-    "email": "similique",
-    "password": "perspiciatis",
-    "roles": "fugit"
+    "username": "porro",
+    "email": "molestias",
+    "password": "quis",
+    "roles": "dolore"
 }'
 </code></pre>
 
@@ -248,10 +248,10 @@ const headers = {
 };
 
 const body = {
-    "username": "inventore",
-    "email": "similique",
-    "password": "perspiciatis",
-    "roles": "fugit"
+    "username": "porro",
+    "email": "molestias",
+    "password": "quis",
+    "roles": "dolore"
 }
 
 fetch(url, {
@@ -425,8 +425,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data '{
-    "username": "sapiente",
-    "password": "saepe"
+    "username": "inventore",
+    "password": "ducimus"
 }'
 </code></pre>
 
@@ -442,8 +442,8 @@ const headers = {
 };
 
 const body = {
-    "username": "sapiente",
-    "password": "saepe"
+    "username": "inventore",
+    "password": "ducimus"
 }
 
 fetch(url, {
@@ -1167,10 +1167,10 @@ content-type: application/json; charset=utf-8 </code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data '{
-    "title": "quasi",
-    "author": "ea",
-    "published": "aperiam",
-    "content": "ad"
+    "title": "non",
+    "author": "quia",
+    "published": "sit",
+    "content": "labore"
 }'
 </code></pre>
 
@@ -1186,10 +1186,10 @@ const headers = {
 };
 
 const body = {
-    "title": "quasi",
-    "author": "ea",
-    "published": "aperiam",
-    "content": "ad"
+    "title": "non",
+    "author": "quia",
+    "published": "sit",
+    "content": "labore"
 }
 
 fetch(url, {
@@ -1453,7 +1453,7 @@ content-type: application/json; charset=utf-8 </code></pre>
     },
     {
         "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
-        "title": "Test Post e4",
+        "title": "Updated Test Post Again",
         "author": "Test",
         "content": "This is a yet another test post content",
         "published": true,
@@ -1646,7 +1646,7 @@ content-type: application/json; charset=utf-8 </code></pre>
     },
     {
         "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
-        "title": "Test Post e4",
+        "title": "Updated Test Post Again",
         "author": "Test",
         "content": "This is a yet another test post content",
         "published": true,
@@ -1731,7 +1731,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
     
         
-<h2 id="Endpoints-GET-api-blog-post">GET /api/blog/post</h2>
+<h2 id="Endpoints-GET-api-blog-post-id">GET /api/blog/post/:id</h2>
 
 <p>
 
@@ -1739,13 +1739,13 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 
-<span id="example-requests-GET-api-blog-post">
+<span id="example-requests-GET-api-blog-post--id">
 <blockquote>Example request:</blockquote>
 
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost/api/blog/post"  \
+    --get "http://localhost/api/blog/post/dicta"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -1753,7 +1753,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost/api/blog/post"
+    "http://localhost/api/blog/post/dicta"
 );
 
 const headers = {
@@ -1773,10 +1773,10 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GET-api-blog-post">
+<span id="example-responses-GET-api-blog-post--id">
 
 
-<blockquote>Example response (403):</blockquote>
+<blockquote>Example response (404):</blockquote>
 
 
 <details class="annotation">
@@ -1793,47 +1793,47 @@ content-type: application/json; charset=utf-8 </code></pre>
  
 <!-- If response is a JSON string, prettify it. Otherwise, just print it -->
 <code class="language-json">{
-    "message": "No token provided!"
+    "message": "No post found with that id"
 }</code>
  </pre>
 
 
 </span>
-<span id="execution-results-GET-api-blog-post" hidden>
-    <blockquote>Received response<span id="execution-response-status-GET-api-blog-post"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GET-api-blog-post"></code></pre>
+<span id="execution-results-GET-api-blog-post--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-blog-post--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-blog-post--id"></code></pre>
 </span>
-<span id="execution-error-GET-api-blog-post" hidden>
+<span id="execution-error-GET-api-blog-post--id" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GET-api-blog-post"></code></pre>
+    <pre><code id="execution-error-message-GET-api-blog-post--id"></code></pre>
 </span>
 
-<form id="form-GET-api-blog-post"
+<form id="form-GET-api-blog-post--id"
       data-method="GET"
-      data-path="/api/blog/post"
+      data-path="/api/blog/post/:id"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GET-api-blog-post', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-blog-post--id', this);">
 <h3>
     Request&nbsp;
     
     <button
             type="button"
             style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-tryout-GET-api-blog-post"
-            onclick="tryItOut('GET-api-blog-post');">Try it out ⚡</button>
+            id="btn-tryout-GET-api-blog-post--id"
+            onclick="tryItOut('GET-api-blog-post--id');">Try it out ⚡</button>
     <button
             type="button"
             style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-canceltryout-GET-api-blog-post"
-            onclick="cancelTryOut('GET-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+            id="btn-canceltryout-GET-api-blog-post--id"
+            onclick="cancelTryOut('GET-api-blog-post--id');" hidden>Cancel</button>&nbsp;&nbsp;
     <button
             type="submit"
             style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-executetryout-GET-api-blog-post" hidden>Send Request 💥</button>
+            id="btn-executetryout-GET-api-blog-post--id" hidden>Send Request 💥</button>
     
 </h3>
 
@@ -1841,9 +1841,30 @@ content-type: application/json; charset=utf-8 </code></pre>
     <small class="badge badge-green">GET</small>
 
 
-    <b><code>/api/blog/post</code></b>
+    <b><code>/api/blog/post/:id</code></b>
 </p>
 
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="GET-api-blog-post--id"
+               data-component="url" required hidden>
+    
+
+<br>
+
+</p>
 
 
 
@@ -1854,7 +1875,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
     
         
-<h2 id="Endpoints-PUT-api-blog-post">PUT /api/blog/post</h2>
+<h2 id="Endpoints-PUT-api-blog-post-id">PUT /api/blog/post/:id</h2>
 
 <p>
 
@@ -1862,13 +1883,13 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 
-<span id="example-requests-PUT-api-blog-post">
+<span id="example-requests-PUT-api-blog-post--id">
 <blockquote>Example request:</blockquote>
 
 
 
 <pre><code class="bash language-bash">curl --request PUT \
-    "http://localhost/api/blog/post"  \
+    "http://localhost/api/blog/post/ratione"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -1876,7 +1897,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost/api/blog/post"
+    "http://localhost/api/blog/post/ratione"
 );
 
 const headers = {
@@ -1896,44 +1917,44 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-PUT-api-blog-post">
+<span id="example-responses-PUT-api-blog-post--id">
 
 </span>
-<span id="execution-results-PUT-api-blog-post" hidden>
-    <blockquote>Received response<span id="execution-response-status-PUT-api-blog-post"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-PUT-api-blog-post"></code></pre>
+<span id="execution-results-PUT-api-blog-post--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUT-api-blog-post--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUT-api-blog-post--id"></code></pre>
 </span>
-<span id="execution-error-PUT-api-blog-post" hidden>
+<span id="execution-error-PUT-api-blog-post--id" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUT-api-blog-post"></code></pre>
+    <pre><code id="execution-error-message-PUT-api-blog-post--id"></code></pre>
 </span>
 
-<form id="form-PUT-api-blog-post"
+<form id="form-PUT-api-blog-post--id"
       data-method="PUT"
-      data-path="/api/blog/post"
+      data-path="/api/blog/post/:id"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUT-api-blog-post', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUT-api-blog-post--id', this);">
 <h3>
     Request&nbsp;
     
     <button
             type="button"
             style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-tryout-PUT-api-blog-post"
-            onclick="tryItOut('PUT-api-blog-post');">Try it out ⚡</button>
+            id="btn-tryout-PUT-api-blog-post--id"
+            onclick="tryItOut('PUT-api-blog-post--id');">Try it out ⚡</button>
     <button
             type="button"
             style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-canceltryout-PUT-api-blog-post"
-            onclick="cancelTryOut('PUT-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+            id="btn-canceltryout-PUT-api-blog-post--id"
+            onclick="cancelTryOut('PUT-api-blog-post--id');" hidden>Cancel</button>&nbsp;&nbsp;
     <button
             type="submit"
             style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-executetryout-PUT-api-blog-post" hidden>Send Request 💥</button>
+            id="btn-executetryout-PUT-api-blog-post--id" hidden>Send Request 💥</button>
     
 </h3>
 
@@ -1941,9 +1962,30 @@ fetch(url, {
     <small class="badge badge-darkblue">PUT</small>
 
 
-    <b><code>/api/blog/post</code></b>
+    <b><code>/api/blog/post/:id</code></b>
 </p>
 
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="PUT-api-blog-post--id"
+               data-component="url" required hidden>
+    
+
+<br>
+
+</p>
 
 
 
@@ -1954,7 +1996,7 @@ fetch(url, {
 
     
         
-<h2 id="Endpoints-DELETE-api-blog-post">DELETE /api/blog/post</h2>
+<h2 id="Endpoints-DELETE-api-blog-post-id">DELETE /api/blog/post/:id</h2>
 
 <p>
 
@@ -1962,13 +2004,13 @@ fetch(url, {
 
 
 
-<span id="example-requests-DELETE-api-blog-post">
+<span id="example-requests-DELETE-api-blog-post--id">
 <blockquote>Example request:</blockquote>
 
 
 
 <pre><code class="bash language-bash">curl --request DELETE \
-    "http://localhost/api/blog/post"  \
+    "http://localhost/api/blog/post/dolorum"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -1976,7 +2018,7 @@ fetch(url, {
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost/api/blog/post"
+    "http://localhost/api/blog/post/dolorum"
 );
 
 const headers = {
@@ -1996,44 +2038,44 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-DELETE-api-blog-post">
+<span id="example-responses-DELETE-api-blog-post--id">
 
 </span>
-<span id="execution-results-DELETE-api-blog-post" hidden>
-    <blockquote>Received response<span id="execution-response-status-DELETE-api-blog-post"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-DELETE-api-blog-post"></code></pre>
+<span id="execution-results-DELETE-api-blog-post--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETE-api-blog-post--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETE-api-blog-post--id"></code></pre>
 </span>
-<span id="execution-error-DELETE-api-blog-post" hidden>
+<span id="execution-error-DELETE-api-blog-post--id" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETE-api-blog-post"></code></pre>
+    <pre><code id="execution-error-message-DELETE-api-blog-post--id"></code></pre>
 </span>
 
-<form id="form-DELETE-api-blog-post"
+<form id="form-DELETE-api-blog-post--id"
       data-method="DELETE"
-      data-path="/api/blog/post"
+      data-path="/api/blog/post/:id"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETE-api-blog-post', this);">
+      onsubmit="event.preventDefault(); executeTryOut('DELETE-api-blog-post--id', this);">
 <h3>
     Request&nbsp;
     
     <button
             type="button"
             style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-tryout-DELETE-api-blog-post"
-            onclick="tryItOut('DELETE-api-blog-post');">Try it out ⚡</button>
+            id="btn-tryout-DELETE-api-blog-post--id"
+            onclick="tryItOut('DELETE-api-blog-post--id');">Try it out ⚡</button>
     <button
             type="button"
             style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-canceltryout-DELETE-api-blog-post"
-            onclick="cancelTryOut('DELETE-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+            id="btn-canceltryout-DELETE-api-blog-post--id"
+            onclick="cancelTryOut('DELETE-api-blog-post--id');" hidden>Cancel</button>&nbsp;&nbsp;
     <button
             type="submit"
             style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-            id="btn-executetryout-DELETE-api-blog-post" hidden>Send Request 💥</button>
+            id="btn-executetryout-DELETE-api-blog-post--id" hidden>Send Request 💥</button>
     
 </h3>
 
@@ -2041,9 +2083,30 @@ fetch(url, {
     <small class="badge badge-red">DELETE</small>
 
 
-    <b><code>/api/blog/post</code></b>
+    <b><code>/api/blog/post/:id</code></b>
 </p>
 
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="DELETE-api-blog-post--id"
+               data-component="url" required hidden>
+    
+
+<br>
+
+</p>
 
 
 

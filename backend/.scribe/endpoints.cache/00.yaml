@@ -38,25 +38,25 @@ endpoints:
       username:
         name: username
         type: string
-        example: inventore
+        example: porro
         required: true
         description: ''
       email:
         name: email
         type: string
-        example: similique
+        example: molestias
         required: true
         description: ''
       password:
         name: password
         type: string
-        example: perspiciatis
+        example: quis
         required: true
         description: ''
       roles:
         name: roles
         type: string
-        example: fugit
+        example: dolore
         required: true
         description: ''
     responses: []
@@ -75,13 +75,13 @@ endpoints:
       username:
         name: username
         type: string
-        example: sapiente
+        example: inventore
         required: true
         description: ''
       password:
         name: password
         type: string
-        example: saepe
+        example: ducimus
         required: true
         description: ''
     responses: []
@@ -202,25 +202,25 @@ endpoints:
       title:
         name: title
         type: string
-        example: quasi
+        example: non
         required: true
         description: ''
       author:
         name: author
         type: string
-        example: ea
+        example: quia
         required: true
         description: ''
       published:
         name: published
         type: string
-        example: aperiam
+        example: sit
         required: true
         description: ''
       content:
         name: content
         type: string
-        example: ad
+        example: labore
         required: true
         description: ''
     responses: []
@@ -291,7 +291,7 @@ endpoints:
               },
               {
                   "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
-                  "title": "Test Post e4",
+                  "title": "Updated Test Post Again",
                   "author": "Test",
                   "content": "This is a yet another test post content",
                   "published": true,
@@ -384,7 +384,7 @@ endpoints:
               },
               {
                   "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
-                  "title": "Test Post e4",
+                  "title": "Updated Test Post Again",
                   "author": "Test",
                   "content": "This is a yet another test post content",
                   "published": true,
@@ -411,7 +411,7 @@ endpoints:
               }
           ]
     responseFields: {}
-  - uri: /api/blog/post
+  - uri: '/api/blog/post/:id'
     httpMethods:
       - GET
     metadata:
@@ -419,11 +419,18 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: {}
+    urlParameters:
+      id:
+        name: id
+        example: dicta
+        required: true
+        type: string
+        description: ''
+        match: ':id'
     queryParameters: {}
     bodyParameters: {}
     responses:
-      - status: 403
+      - status: 404
         description: ''
         headers:
           access-control-allow-origin: '*'
@@ -431,10 +438,10 @@ endpoints:
           content-type: application/json; charset=utf-8
         content: |-
           {
-              "message": "No token provided!"
+              "message": "No post found with that id"
           }
     responseFields: {}
-  - uri: /api/blog/post
+  - uri: '/api/blog/post/:id'
     httpMethods:
       - PUT
     metadata:
@@ -442,12 +449,19 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: {}
+    urlParameters:
+      id:
+        name: id
+        example: ratione
+        required: true
+        type: string
+        description: ''
+        match: ':id'
     queryParameters: {}
     bodyParameters: {}
     responses: []
     responseFields: {}
-  - uri: /api/blog/post
+  - uri: '/api/blog/post/:id'
     httpMethods:
       - DELETE
     metadata:
@@ -455,7 +469,14 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: {}
+    urlParameters:
+      id:
+        name: id
+        example: dolorum
+        required: true
+        type: string
+        description: ''
+        match: ':id'
     queryParameters: {}
     bodyParameters: {}
     responses: []
