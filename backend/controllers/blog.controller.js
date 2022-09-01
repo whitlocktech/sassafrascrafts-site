@@ -1,5 +1,4 @@
 const { v4: uuidv4 } = require('uuid')
-const { mongoose } = require('../models')
 const db = require("../models")
 const Blog = db.blog
 
@@ -40,7 +39,7 @@ exports.createPost = (req, res) => {
         })
     })
 } 
-// Can not get the individual post with this method Must update it to another
+
 // method of finding individual posts
 exports.getPost = (req, res) => {
     const id = req.params.id
@@ -63,7 +62,7 @@ exports.updatePost = (req, res) => {
         })
     }
     const id = req.params.id
-    Blog.findByIdAndUpdate(_id, req.body, { useFindAndModify: false})
+    Blog.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if (!data) {
                 res.status(404).send({
