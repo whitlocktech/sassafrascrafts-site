@@ -63,7 +63,7 @@ exports.updatePost = (req, res) => {
         })
     }
     const id = req.params.id
-    Blog.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+    Blog.findByIdAndUpdate(_id, req.body, { useFindAndModify: false})
         .then(data => {
             if (!data) {
                 res.status(404).send({

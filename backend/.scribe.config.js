@@ -10,12 +10,12 @@ module.exports = {
     /*
      * The base URL displayed in the docs.
      */
-    baseUrl: "http://localhost:8000",
+    baseUrl: "http://localhost",
 
     /*
      * The HTML <title> for the generated documentation, and the name of the generated Postman collection and OpenAPI spec.
      */
-    title: "MEVN-backend Documentation",
+    title: "Backend Documentation",
     description: '',
 
     /*

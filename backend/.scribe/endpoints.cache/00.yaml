@@ -17,12 +17,11 @@ endpoints:
       - status: 200
         description: ''
         headers:
-          access-control-allow-origin: 'http://localhost:8081'
-          vary: Origin
+          access-control-allow-origin: '*'
           content-type: application/json; charset=utf-8
         content: |-
           {
-              "message": "Welcome to bezkoder application."
+              "message": "Welcome to whitlocktech application."
           }
     responseFields: {}
   - uri: /api/auth/signup
@@ -39,25 +38,25 @@ endpoints:
       username:
         name: username
         type: string
-        example: reiciendis
+        example: inventore
         required: true
         description: ''
       email:
         name: email
         type: string
-        example: nostrum
+        example: similique
         required: true
         description: ''
       password:
         name: password
         type: string
-        example: minus
+        example: perspiciatis
         required: true
         description: ''
       roles:
         name: roles
         type: string
-        example: reprehenderit
+        example: fugit
         required: true
         description: ''
     responses: []
@@ -76,13 +75,13 @@ endpoints:
       username:
         name: username
         type: string
-        example: neque
+        example: sapiente
         required: true
         description: ''
       password:
         name: password
         type: string
-        example: esse
+        example: saepe
         required: true
         description: ''
     responses: []
@@ -115,8 +114,7 @@ endpoints:
       - status: 200
         description: ''
         headers:
-          access-control-allow-origin: 'http://localhost:8081'
-          vary: Origin
+          access-control-allow-origin: '*'
           access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
           content-type: text/html; charset=utf-8
         content: Public Content.
@@ -136,8 +134,7 @@ endpoints:
       - status: 403
         description: ''
         headers:
-          access-control-allow-origin: 'http://localhost:8081'
-          vary: Origin
+          access-control-allow-origin: '*'
           access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
           content-type: application/json; charset=utf-8
         content: |-
@@ -160,8 +157,7 @@ endpoints:
       - status: 403
         description: ''
         headers:
-          access-control-allow-origin: 'http://localhost:8081'
-          vary: Origin
+          access-control-allow-origin: '*'
           access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
           content-type: application/json; charset=utf-8
         content: |-
@@ -184,12 +180,283 @@ endpoints:
       - status: 403
         description: ''
         headers:
-          access-control-allow-origin: 'http://localhost:8081'
-          vary: Origin
+          access-control-allow-origin: '*'
           access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
           content-type: application/json; charset=utf-8
         content: |-
           {
               "message": "No token provided!"
           }
+    responseFields: {}
+  - uri: /api/blog/post
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      title:
+        name: title
+        type: string
+        example: quasi
+        required: true
+        description: ''
+      author:
+        name: author
+        type: string
+        example: ea
+        required: true
+        description: ''
+      published:
+        name: published
+        type: string
+        example: aperiam
+        required: true
+        description: ''
+      content:
+        name: content
+        type: string
+        example: ad
+        required: true
+        description: ''
+    responses: []
+    responseFields: {}
+  - uri: /api/blog/posts
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 200
+        description: ''
+        headers:
+          access-control-allow-origin: '*'
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          [
+              {
+                  "_id": "631060026527e139cc9ce77f",
+                  "title": "New Test Post",
+                  "author": "Tester",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "63106012b1acf4cc71efe53d",
+                  "title": "New Test Post",
+                  "author": "Tester",
+                  "content": "This is a test post content.",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "631062998810945711c91a1c",
+                  "title": "Test Post 3",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "631062ff92b7f31de73f91d3",
+                  "title": "Test Post 4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "f7917859-64bd-427e-bdaa-4b135a5b2068",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "f3cef51c-b160-47cc-8cb1-d4948c43f66b",
+                  "title": "Test Post e43",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              }
+          ]
+    responseFields: {}
+  - uri: /api/blog/published
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 200
+        description: ''
+        headers:
+          access-control-allow-origin: '*'
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          [
+              {
+                  "_id": "631060026527e139cc9ce77f",
+                  "title": "New Test Post",
+                  "author": "Tester",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "63106012b1acf4cc71efe53d",
+                  "title": "New Test Post",
+                  "author": "Tester",
+                  "content": "This is a test post content.",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "631062998810945711c91a1c",
+                  "title": "Test Post 3",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "631062ff92b7f31de73f91d3",
+                  "title": "Test Post 4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "f7917859-64bd-427e-bdaa-4b135a5b2068",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0",
+                  "title": "Test Post e4",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              },
+              {
+                  "_id": "f3cef51c-b160-47cc-8cb1-d4948c43f66b",
+                  "title": "Test Post e43",
+                  "author": "Test",
+                  "content": "This is a yet another test post content",
+                  "published": true,
+                  "images": [],
+                  "__v": 0
+              }
+          ]
+    responseFields: {}
+  - uri: /api/blog/post
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 403
+        description: ''
+        headers:
+          access-control-allow-origin: '*'
+          access-control-allow-headers: 'x-access-token, Origin, Content-Type, Accept'
+          content-type: application/json; charset=utf-8
+        content: |-
+          {
+              "message": "No token provided!"
+          }
+    responseFields: {}
+  - uri: /api/blog/post
+    httpMethods:
+      - PUT
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /api/blog/post
+    httpMethods:
+      - DELETE
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
     responseFields: {}

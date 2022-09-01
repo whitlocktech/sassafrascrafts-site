@@ -5,14 +5,14 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "localhost:8000"
+            "value": "localhost"
         }
     ],
     "info": {
-        "name": "MEVN-backend Documentation",
+        "name": "Backend Documentation",
         "description": "",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_postman_id": "365c4a88-f15f-4ff2-b1ce-25bd840cc617"
+        "_postman_id": "23e6d466-1eac-477c-a42c-497f09297a00"
     },
     "item": [
         {
@@ -49,11 +49,7 @@
                             "header": [
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "http://localhost:8081"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "value": "*"
                                 },
                                 {
                                     "key": "content-type",
@@ -61,7 +57,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\n    \"message\": \"Welcome to bezkoder application.\"\n}",
+                            "body": "{\n    \"message\": \"Welcome to whitlocktech application.\"\n}",
                             "name": ""
                         }
                     ]
@@ -88,7 +84,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"username\": \"reiciendis\",\n    \"email\": \"nostrum\",\n    \"password\": \"minus\",\n    \"roles\": \"reprehenderit\"\n}"
+                            "raw": "{\n    \"username\": \"inventore\",\n    \"email\": \"similique\",\n    \"password\": \"perspiciatis\",\n    \"roles\": \"fugit\"\n}"
                         },
                         "description": null,
                         "auth": {
@@ -119,7 +115,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"username\": \"neque\",\n    \"password\": \"esse\"\n}"
+                            "raw": "{\n    \"username\": \"sapiente\",\n    \"password\": \"saepe\"\n}"
                         },
                         "description": null,
                         "auth": {
@@ -187,11 +183,7 @@
                             "header": [
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "http://localhost:8081"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "value": "*"
                                 },
                                 {
                                     "key": "access-control-allow-headers",
@@ -239,11 +231,7 @@
                             "header": [
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "http://localhost:8081"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "value": "*"
                                 },
                                 {
                                     "key": "access-control-allow-headers",
@@ -291,11 +279,7 @@
                             "header": [
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "http://localhost:8081"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "value": "*"
                                 },
                                 {
                                     "key": "access-control-allow-headers",
@@ -343,11 +327,7 @@
                             "header": [
                                 {
                                     "key": "access-control-allow-origin",
-                                    "value": "http://localhost:8081"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "value": "*"
                                 },
                                 {
                                     "key": "access-control-allow-headers",
@@ -363,6 +343,237 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/post",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/post"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"quasi\",\n    \"author\": \"ea\",\n    \"published\": \"aperiam\",\n    \"content\": \"ad\"\n}"
+                        },
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/posts",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/posts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "access-control-allow-headers",
+                                    "value": "x-access-token, Origin, Content-Type, Accept"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application/json; charset=utf-8"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/published",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/published"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "access-control-allow-headers",
+                                    "value": "x-access-token, Origin, Content-Type, Accept"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application/json; charset=utf-8"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[\n    {\n        \"_id\": \"631060026527e139cc9ce77f\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63106012b1acf4cc71efe53d\",\n        \"title\": \"New Test Post\",\n        \"author\": \"Tester\",\n        \"content\": \"This is a test post content.\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062998810945711c91a1c\",\n        \"title\": \"Test Post 3\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"631062ff92b7f31de73f91d3\",\n        \"title\": \"Test Post 4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f7917859-64bd-427e-bdaa-4b135a5b2068\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"771a16e6-14d6-4d44-91ec-c853362c6ee1\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0\",\n        \"title\": \"Test Post e4\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"f3cef51c-b160-47cc-8cb1-d4948c43f66b\",\n        \"title\": \"Test Post e43\",\n        \"author\": \"Test\",\n        \"content\": \"This is a yet another test post content\",\n        \"published\": true,\n        \"images\": [],\n        \"__v\": 0\n    }\n]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/post",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/post"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "access-control-allow-headers",
+                                    "value": "x-access-token, Origin, Content-Type, Accept"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application/json; charset=utf-8"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\n    \"message\": \"No token provided!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/post",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/post"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/blog/post",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/blog/post"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         }

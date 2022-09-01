@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>MEVN-backend Documentation</title>
+    <title>Backend Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
@@ -20,7 +20,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script>
-    var baseUrl = "http://localhost:8000";
+    var baseUrl = "http://localhost";
     </script>
     <script src="js/tryitout-2.0.2.js"></script>
     
@@ -62,7 +62,7 @@
         </ul>
     
         <ul class="toc-footer" id="last-updated">
-            <li>Last updated: August 30, 2022</li>
+            <li>Last updated: September 1, 2022</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -103,7 +103,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost:8000/"  \
+    --get "http://localhost/"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -111,7 +111,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/"
+    "http://localhost/"
 );
 
 const headers = {
@@ -142,8 +142,7 @@ fetch(url, {
         <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
     </summary>
     <pre><code class="language-http">
-access-control-allow-origin: http://localhost:8081
-vary: Origin
+access-control-allow-origin: *
 content-type: application/json; charset=utf-8 </code></pre>
 </details> 
 
@@ -151,7 +150,7 @@ content-type: application/json; charset=utf-8 </code></pre>
  
 <!-- If response is a JSON string, prettify it. Otherwise, just print it -->
 <code class="language-json">{
-    "message": "Welcome to bezkoder application."
+    "message": "Welcome to whitlocktech application."
 }</code>
  </pre>
 
@@ -226,21 +225,21 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="bash language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/signup"  \
+    "http://localhost/api/auth/signup"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data '{
-    "username": "reiciendis",
-    "email": "nostrum",
-    "password": "minus",
-    "roles": "reprehenderit"
+    "username": "inventore",
+    "email": "similique",
+    "password": "perspiciatis",
+    "roles": "fugit"
 }'
 </code></pre>
 
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/signup"
+    "http://localhost/api/auth/signup"
 );
 
 const headers = {
@@ -249,10 +248,10 @@ const headers = {
 };
 
 const body = {
-    "username": "reiciendis",
-    "email": "nostrum",
-    "password": "minus",
-    "roles": "reprehenderit"
+    "username": "inventore",
+    "email": "similique",
+    "password": "perspiciatis",
+    "roles": "fugit"
 }
 
 fetch(url, {
@@ -422,19 +421,19 @@ fetch(url, {
 
 
 <pre><code class="bash language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/signin"  \
+    "http://localhost/api/auth/signin"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data '{
-    "username": "neque",
-    "password": "esse"
+    "username": "sapiente",
+    "password": "saepe"
 }'
 </code></pre>
 
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/signin"
+    "http://localhost/api/auth/signin"
 );
 
 const headers = {
@@ -443,8 +442,8 @@ const headers = {
 };
 
 const body = {
-    "username": "neque",
-    "password": "esse"
+    "username": "sapiente",
+    "password": "saepe"
 }
 
 fetch(url, {
@@ -574,7 +573,7 @@ fetch(url, {
 
 
 <pre><code class="bash language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/refreshtoken"  \
+    "http://localhost/api/auth/refreshtoken"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -582,7 +581,7 @@ fetch(url, {
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/refreshtoken"
+    "http://localhost/api/auth/refreshtoken"
 );
 
 const headers = {
@@ -674,7 +673,7 @@ fetch(url, {
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost:8000/api/test/all"  \
+    --get "http://localhost/api/test/all"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -682,7 +681,7 @@ fetch(url, {
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/test/all"
+    "http://localhost/api/test/all"
 );
 
 const headers = {
@@ -713,8 +712,7 @@ fetch(url, {
         <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
     </summary>
     <pre><code class="language-http">
-access-control-allow-origin: http://localhost:8081
-vary: Origin
+access-control-allow-origin: *
 access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
 content-type: text/html; charset=utf-8 </code></pre>
 </details> 
@@ -796,7 +794,7 @@ content-type: text/html; charset=utf-8 </code></pre>
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost:8000/api/test/user"  \
+    --get "http://localhost/api/test/user"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -804,7 +802,7 @@ content-type: text/html; charset=utf-8 </code></pre>
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/test/user"
+    "http://localhost/api/test/user"
 );
 
 const headers = {
@@ -835,8 +833,7 @@ fetch(url, {
         <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
     </summary>
     <pre><code class="language-http">
-access-control-allow-origin: http://localhost:8081
-vary: Origin
+access-control-allow-origin: *
 access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
 content-type: application/json; charset=utf-8 </code></pre>
 </details> 
@@ -920,7 +917,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost:8000/api/test/mod"  \
+    --get "http://localhost/api/test/mod"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -928,7 +925,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/test/mod"
+    "http://localhost/api/test/mod"
 );
 
 const headers = {
@@ -959,8 +956,7 @@ fetch(url, {
         <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
     </summary>
     <pre><code class="language-http">
-access-control-allow-origin: http://localhost:8081
-vary: Origin
+access-control-allow-origin: *
 access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
 content-type: application/json; charset=utf-8 </code></pre>
 </details> 
@@ -1044,7 +1040,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="bash language-bash">curl --request GET \
-    --get "http://localhost:8000/api/test/admin"  \
+    --get "http://localhost/api/test/admin"  \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"
 </code></pre>
@@ -1052,7 +1048,7 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
 <pre><code class="javascript language-javascript">const url = new URL(
-    "http://localhost:8000/api/test/admin"
+    "http://localhost/api/test/admin"
 );
 
 const headers = {
@@ -1083,8 +1079,7 @@ fetch(url, {
         <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
     </summary>
     <pre><code class="language-http">
-access-control-allow-origin: http://localhost:8081
-vary: Origin
+access-control-allow-origin: *
 access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
 content-type: application/json; charset=utf-8 </code></pre>
 </details> 
@@ -1142,6 +1137,911 @@ content-type: application/json; charset=utf-8 </code></pre>
 
 
     <b><code>/api/test/admin</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-POST-api-blog-post">POST /api/blog/post</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-api-blog-post">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://localhost/api/blog/post"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data '{
+    "title": "quasi",
+    "author": "ea",
+    "published": "aperiam",
+    "content": "ad"
+}'
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+const body = {
+    "title": "quasi",
+    "author": "ea",
+    "published": "aperiam",
+    "content": "ad"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(body),
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-api-blog-post">
+
+</span>
+<span id="execution-results-POST-api-blog-post" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-api-blog-post"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-api-blog-post"></code></pre>
+</span>
+<span id="execution-error-POST-api-blog-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-api-blog-post"></code></pre>
+</span>
+
+<form id="form-POST-api-blog-post"
+      data-method="POST"
+      data-path="/api/blog/post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-api-blog-post', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-api-blog-post"
+            onclick="tryItOut('POST-api-blog-post');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-api-blog-post"
+            onclick="cancelTryOut('POST-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-api-blog-post" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/api/blog/post</code></b>
+</p>
+
+
+
+
+
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+
+    
+    
+            <p>
+                <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="title"
+               data-endpoint="POST-api-blog-post"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+    
+    
+            <p>
+                <b><code>author</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="author"
+               data-endpoint="POST-api-blog-post"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+    
+    
+            <p>
+                <b><code>published</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="published"
+               data-endpoint="POST-api-blog-post"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+    
+    
+            <p>
+                <b><code>content</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="content"
+               data-endpoint="POST-api-blog-post"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-blog-posts">GET /api/blog/posts</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-blog-posts">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://localhost/api/blog/posts"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/posts"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-blog-posts">
+
+
+<blockquote>Example response (200):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">[
+    {
+        "_id": "631060026527e139cc9ce77f",
+        "title": "New Test Post",
+        "author": "Tester",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "63106012b1acf4cc71efe53d",
+        "title": "New Test Post",
+        "author": "Tester",
+        "content": "This is a test post content.",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "631062998810945711c91a1c",
+        "title": "Test Post 3",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "631062ff92b7f31de73f91d3",
+        "title": "Test Post 4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "f7917859-64bd-427e-bdaa-4b135a5b2068",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "f3cef51c-b160-47cc-8cb1-d4948c43f66b",
+        "title": "Test Post e43",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    }
+]</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-blog-posts" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-blog-posts"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-blog-posts"></code></pre>
+</span>
+<span id="execution-error-GET-api-blog-posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-blog-posts"></code></pre>
+</span>
+
+<form id="form-GET-api-blog-posts"
+      data-method="GET"
+      data-path="/api/blog/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-blog-posts', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-blog-posts"
+            onclick="tryItOut('GET-api-blog-posts');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-blog-posts"
+            onclick="cancelTryOut('GET-api-blog-posts');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-blog-posts" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/blog/posts</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-blog-published">GET /api/blog/published</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-blog-published">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://localhost/api/blog/published"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/published"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-blog-published">
+
+
+<blockquote>Example response (200):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">[
+    {
+        "_id": "631060026527e139cc9ce77f",
+        "title": "New Test Post",
+        "author": "Tester",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "63106012b1acf4cc71efe53d",
+        "title": "New Test Post",
+        "author": "Tester",
+        "content": "This is a test post content.",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "631062998810945711c91a1c",
+        "title": "Test Post 3",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "631062ff92b7f31de73f91d3",
+        "title": "Test Post 4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "f7917859-64bd-427e-bdaa-4b135a5b2068",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "771a16e6-14d6-4d44-91ec-c853362c6ee1",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "8b5fc5a5-e25e-4c75-927d-8ae610fcb5c0",
+        "title": "Test Post e4",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    },
+    {
+        "_id": "f3cef51c-b160-47cc-8cb1-d4948c43f66b",
+        "title": "Test Post e43",
+        "author": "Test",
+        "content": "This is a yet another test post content",
+        "published": true,
+        "images": [],
+        "__v": 0
+    }
+]</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-blog-published" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-blog-published"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-blog-published"></code></pre>
+</span>
+<span id="execution-error-GET-api-blog-published" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-blog-published"></code></pre>
+</span>
+
+<form id="form-GET-api-blog-published"
+      data-method="GET"
+      data-path="/api/blog/published"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-blog-published', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-blog-published"
+            onclick="tryItOut('GET-api-blog-published');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-blog-published"
+            onclick="cancelTryOut('GET-api-blog-published');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-blog-published" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/blog/published</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-blog-post">GET /api/blog/post</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-blog-post">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://localhost/api/blog/post"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-blog-post">
+
+
+<blockquote>Example response (403):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+access-control-allow-headers: x-access-token, Origin, Content-Type, Accept
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "message": "No token provided!"
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-blog-post" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-blog-post"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-blog-post"></code></pre>
+</span>
+<span id="execution-error-GET-api-blog-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-blog-post"></code></pre>
+</span>
+
+<form id="form-GET-api-blog-post"
+      data-method="GET"
+      data-path="/api/blog/post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-blog-post', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-blog-post"
+            onclick="tryItOut('GET-api-blog-post');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-blog-post"
+            onclick="cancelTryOut('GET-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-blog-post" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/blog/post</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-PUT-api-blog-post">PUT /api/blog/post</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-PUT-api-blog-post">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request PUT \
+    "http://localhost/api/blog/post"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-PUT-api-blog-post">
+
+</span>
+<span id="execution-results-PUT-api-blog-post" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUT-api-blog-post"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUT-api-blog-post"></code></pre>
+</span>
+<span id="execution-error-PUT-api-blog-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUT-api-blog-post"></code></pre>
+</span>
+
+<form id="form-PUT-api-blog-post"
+      data-method="PUT"
+      data-path="/api/blog/post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUT-api-blog-post', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-PUT-api-blog-post"
+            onclick="tryItOut('PUT-api-blog-post');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-PUT-api-blog-post"
+            onclick="cancelTryOut('PUT-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-PUT-api-blog-post" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-darkblue">PUT</small>
+
+
+    <b><code>/api/blog/post</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-DELETE-api-blog-post">DELETE /api/blog/post</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-DELETE-api-blog-post">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request DELETE \
+    "http://localhost/api/blog/post"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://localhost/api/blog/post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-DELETE-api-blog-post">
+
+</span>
+<span id="execution-results-DELETE-api-blog-post" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETE-api-blog-post"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETE-api-blog-post"></code></pre>
+</span>
+<span id="execution-error-DELETE-api-blog-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETE-api-blog-post"></code></pre>
+</span>
+
+<form id="form-DELETE-api-blog-post"
+      data-method="DELETE"
+      data-path="/api/blog/post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETE-api-blog-post', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-DELETE-api-blog-post"
+            onclick="tryItOut('DELETE-api-blog-post');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-DELETE-api-blog-post"
+            onclick="cancelTryOut('DELETE-api-blog-post');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-DELETE-api-blog-post" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-red">DELETE</small>
+
+
+    <b><code>/api/blog/post</code></b>
 </p>
 
 
