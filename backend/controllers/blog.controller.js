@@ -1,4 +1,5 @@
-const { UUID } = require("bson")
+const { v4: uuidv4 } = require('uuid')
+const { mongoose } = require('../models')
 const db = require("../models")
 const Blog = db.blog
 
@@ -21,6 +22,7 @@ exports.createPost = (req, res) => {
         return
     }
     const blog = new Blog({
+        _id: uuidv4(),
         title: req.body.title,
         author: req.body.author,
         published: req.body.published,
@@ -41,8 +43,8 @@ exports.createPost = (req, res) => {
 // Can not get the individual post with this method Must update it to another
 // method of finding individual posts
 exports.getPost = (req, res) => {
-    const id = req.params.id
-    Blog.findById(id)
+    const _id = req.params.id
+    Blog.findById(_id)
         .then(data => {
             if (!data)
                 res.status(404).send({ message: "No post found with that id"})
