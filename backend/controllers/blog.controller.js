@@ -43,8 +43,8 @@ exports.createPost = (req, res) => {
 // Can not get the individual post with this method Must update it to another
 // method of finding individual posts
 exports.getPost = (req, res) => {
-    const _id = req.params.id
-    Blog.findById(_id)
+    const id = req.params.id
+    Blog.findById(id)
         .then(data => {
             if (!data)
                 res.status(404).send({ message: "No post found with that id"})
